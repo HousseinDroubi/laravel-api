@@ -98,4 +98,28 @@ class TestController extends Controller
 
     return $res;
     }
+
+    function getResultFromPrefix($string){
+        $prefix = explode(" ", $string);
+        $result = "";
+        $notation = $prefix[0];
+        $first_number=$prefix[1];
+        $second_number=$prefix[2];
+        switch ($notation) {
+            case "+":
+                $result=$first_number+$second_number;
+            break;
+            case "-":
+                $result=$first_number-$second_number;
+            break;
+            case "*":
+                $result=$first_number*$second_number;
+            break;
+            case "/":
+                $result=$first_number/$second_number;
+                break;
+        }
+
+        return $result;
+        }
 }

@@ -13,6 +13,9 @@ Route::get("/arrange/{number}",[TestController::class,'arrangeNumber']);
 // The below route will return the first api.
 Route::get("/toBinary/{string}",[TestController::class,'getBinaryFromString']);
 
+// The below route will return the first api.
+Route::get("/prefix/{string}",[TestController::class,'getResultFromPrefix']);
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
