@@ -86,4 +86,16 @@ class TestController extends Controller
         $res = array_reverse($res);
         return json_encode($res);
     }
+
+    function getBinaryFromString($string){
+    $binary = array();
+    preg_match_all('!\d+!', $string, $matches);
+    $lenght = count($matches[0]);
+    for($i = 0 ; $i < $lenght ; $i++){
+         array_push($binary,decbin($matches[0][$i]));
+    }
+    $res = str_replace($matches[0], $binary, $string);
+
+    return $res;
+    }
 }
