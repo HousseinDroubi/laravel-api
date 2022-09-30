@@ -8,12 +8,12 @@ use App\Http\Controllers\TestController;
 Route::get("/sort/{string}",[TestController::class,'sortString']);
 
 // The below route will return the second api.
-Route::get("/arrange/{number}",[TestController::class,'arrangeNumber']);
+Route::get("/arrange/{num}",[TestController::class,'arrangeNumber']);
 
-// The below route will return the first api.
+// The below route will return the third api.
 Route::get("/toBinary/{string}",[TestController::class,'getBinaryFromString']);
 
-// The below route will return the first api.
+// The below route will return the forth api.
 Route::get("/prefix/{string}",[TestController::class,'getResultFromPrefix']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
