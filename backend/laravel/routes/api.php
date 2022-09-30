@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 
 Route::get("/sort/{string}",[TestController::class,'sortString']);
-
+Route::get("/arrange/{number}",[TestController::class,'arrangeNumber']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
